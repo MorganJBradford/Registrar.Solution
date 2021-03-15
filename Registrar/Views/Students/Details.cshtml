@@ -1,0 +1,31 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Registrar.Models.Student
+
+<h2>Student Profile</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h3>@Html.DisplayNameFor(model => model.Date): @Html.DisplayFor(model => model.Date)</h3>
+
+@if(@Model.JoinEntities.Count == 0)
+{
+  <p>This student is not enrolled in any courses yet</p>
+}
+else
+{
+  <h4>Courses the student is enrolled in:</h4>
+  <ul>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.Course.Name</li>
+    <li>@join.Course.CourseNumber</li>
+    @* @using (Html.BeginForm("DeleteCourse", "Students"))
+    {
+      @Html.Hidden("joinId", @join.CouseStudentId)
+      <input type="submit" value="Delete"/>
+    } *@
+  }
+  </ul>
+}
