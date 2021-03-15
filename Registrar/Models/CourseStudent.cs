@@ -1,7 +1,11 @@
 namespace Registrar.Models
 {
-  public class ClassName
+  public class CourseStudent
   {
-    // properties, constructors, methods, etc. go here
+    public int CourseStudentId { get; set; }
+    public int CourseId { get; set; }
+    public int StudentId { get; set; }
+    public virtual Student Student { get; set; }
+    public virtual Course Course { get; set; }
   }
 }
