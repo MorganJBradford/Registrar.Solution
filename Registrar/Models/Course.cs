@@ -1,4 +1,4 @@
-namespace ProjectName
+namespace Registrar.Models
 {
   public class ClassName
   {
