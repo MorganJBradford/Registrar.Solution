@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Registrar.Models
 {
   public class Student
@@ -8,6 +10,9 @@ namespace Registrar.Models
     }
 
     public int StudentId { get; set; }
-    
+    public string Name { get; set; }
+    public string Date { get; set; }
+
+    public virtual ICollection<CourseStudent> JoinEntities { get; }
   }
 }
