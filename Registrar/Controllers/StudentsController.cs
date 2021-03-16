@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using Registrar.Models;
-using System.Collections.Generic; // to be able to use lists, dictionary
 using System.Linq;// ORM, to be able query objects
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering; //html helpers
