@@ -7,7 +7,7 @@
 <h2>Student Profile</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-<h3>@Html.DisplayNameFor(model => model.Date): @Html.DisplayFor(model => model.Date)</h3>
+<h3>Enrollment Date: @Html.DisplayFor(model => model.Date)</h3>
 
 @if(@Model.JoinEntities.Count == 0)
 {
@@ -19,8 +19,8 @@ else
   <ul>
   @foreach(var join in Model.JoinEntities)
   {
-    <li>@join.Course.Name</li>
-    <li>@join.Course.CourseNumber</li>
+    <li>@join.Course.Name - @join.Course.CourseNumber</li>
+
     @using (Html.BeginForm("DeleteCourse", "Students"))
     {
       @Html.Hidden("joinId", @join.CourseStudentId)
