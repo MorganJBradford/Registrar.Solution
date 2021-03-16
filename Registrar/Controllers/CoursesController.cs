@@ -45,7 +45,7 @@ namespace Registrar.Controllers
 
     public ActionResult Edit(int id)
     {
-      Course thisCourse = _db.Courses.FirstOrDefault(course = course.CourseId == id);
+      Course thisCourse = _db.Courses.FirstOrDefault(course => course.CourseId == id);
       return View(thisCourse);
     }
     
