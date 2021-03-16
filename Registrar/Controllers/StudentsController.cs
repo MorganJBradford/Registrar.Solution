@@ -46,5 +46,12 @@ namespace Registrar.Controllers
         . FirstOrDefault(student => student.StudentId == id);
       return View(thisStudent);
     } 
+
+    public ActionResult Edit(int id)
+    {
+      Student thisStudent = _db.Students.FirstOrDefault(student => student.StudentId == id);
+      ViewBag.CourseId = new SelectList(_db.Courses, "CourseId", "Name");
+      return View(thisStudent);
+    }
   }
 }
