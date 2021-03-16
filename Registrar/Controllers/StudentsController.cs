@@ -21,7 +21,7 @@ namespace Registrar.Controllers
 
     public ActionResult Create()
     {
-      Viewbag.CourseId = new SelectList(_db.Courses, "CourseId", "Name");
+      ViewBag.CourseId = new SelectList(_db.Courses, "CourseId", "Name");
       return View();
     }
 
