@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Registrar.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,8 @@ namespace Registrar.Controllers
 
     public ActionResult Create()
     {
-    return View();
+      ViewBag.DepartmentId = new SelectList(_db.Departments, "DepartmentId", "Name");
+      return View();
     }
 
     [HttpPost]
