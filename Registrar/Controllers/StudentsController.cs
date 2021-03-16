@@ -53,5 +53,17 @@ namespace Registrar.Controllers
       ViewBag.CourseId = new SelectList(_db.Courses, "CourseId", "Name");
       return View(thisStudent);
     }
+
+    [HttpPost]
+    public ActionResult Edit(Student student, int CourseId)
+    {
+      if (CourseId != 0)
+      {
+        _db.CourseStudent.Add(new CourseStudent() { CourseId = CourseId, StudentId = student.StudentId});
+      }
+      _db.Entry(student).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
