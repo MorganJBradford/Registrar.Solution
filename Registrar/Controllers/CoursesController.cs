@@ -42,5 +42,12 @@ namespace Registrar.Controllers
         .FirstOrDefault(course => course.CourseId == id);
       return View(thisCourse);
     }
+
+    public ActionResult Edit(int id)
+    {
+      Course thisCourse = _db.Courses.FirstOrDefault(course = course.CourseId == id);
+      return View(thisCourse);
+    }
+    
   }
 }
