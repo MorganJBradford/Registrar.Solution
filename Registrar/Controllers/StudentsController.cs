@@ -73,5 +73,16 @@ namespace Registrar.Controllers
       return View(thisStudent);
     }
 
+    [HttpPost]
+    public ActionResult AddCourse(Student student, int CourseId)
+    {
+      if (CourseId != 0)
+      {
+        _db.CourseStudent.Add(new CourseStudent() { CourseId = CourseId, StudentId = student.StudentId });
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
   }
 }
