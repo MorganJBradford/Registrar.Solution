@@ -12,7 +12,7 @@ namespace Registrar.Models
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      optionsBuilder.useLazyLoadingProxies();
+      optionsBuilder.UseLazyLoadingProxies();
     }
   }
 }

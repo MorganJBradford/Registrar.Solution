@@ -6,7 +6,7 @@ namespace Registrar.Models
   {
     public Student()
     {
-      this.JoinEntities = new Hashset<CourseStudent>();
+      this.JoinEntities = new HashSet<CourseStudent>();
     }
 
     public int StudentId { get; set; }

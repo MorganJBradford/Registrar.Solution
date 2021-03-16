@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using Registrar.Models;
 using System.Collections.Generic; // to be able to use lists, dictionary
 using System.Linq;// ORM, to be able query objects
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering; //html helpers
 
 namespace Registrar.Controllers
 {
-  public class StudentsController : Controllers
+  public class StudentsController : Controller
   {
     private readonly RegistrarContext _db;
     public StudentsController(RegistrarContext db)
