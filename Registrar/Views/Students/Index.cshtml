@@ -11,7 +11,7 @@
 {
   <h3>No students have been added yet.</h3>
 }
-<ul></ul>
+<ul>
 @foreach (Student student in Model)
 {
   <li>@Html.ActionLink($"{student.Name}", "Details", new { id = student.StudentId })</li>
