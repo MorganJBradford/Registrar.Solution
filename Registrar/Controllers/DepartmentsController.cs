@@ -26,6 +26,7 @@ namespace Registrar.Controllers
       return View();
     }
 
+    [HttpPost]
     public ActionResult Create(Department department)
     {
       _db.Departments.Add(department);
